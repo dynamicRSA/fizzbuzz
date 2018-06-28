@@ -33,7 +33,13 @@ namespace FizzBuzzFormsApplication
                 //fizz buzz logic 
                 for (int i = 1; i <= 100; i++)
                 {
-                    if (i % (Convert.ToInt32(fizzValue.Text)) == 0)
+                    if ((i % (Convert.ToInt32(fizzValue.Text)) == 0) && (i % (Convert.ToInt32(buzzValue.Text)) == 0))
+                    {
+                        //out fizzbuzz
+                        Console.WriteLine("FizzBuzz");
+                        listBox1.Items.Add("FizzBuzz");
+                    }
+                    else if (i % (Convert.ToInt32(fizzValue.Text)) == 0)
                     {
                         //out fizz
                         Console.WriteLine("Fizz");
@@ -44,12 +50,6 @@ namespace FizzBuzzFormsApplication
                         //out buzz
                         Console.WriteLine("Buzz");
                         listBox1.Items.Add("Buzz");
-                    }
-                    else if ((i % (Convert.ToInt32(fizzValue.Text)) == 0) && (i % (Convert.ToInt32(buzzValue.Text)) == 0))
-                    {
-                        //out fizzbuzz
-                        Console.WriteLine("FizzBuzz");
-                        listBox1.Items.Add("FizzBuzz");
                     }
                     else {
                         Console.WriteLine(i);
